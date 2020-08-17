@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.codingdemos.creditor.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        android:translationX="0dp"
+        android:translationY="-200dp"
+        app:srcCompat="@drawable/finnalogo" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="300dp"
+        android:translationY="310dp" />
+
+    <com.braintreepayments.cardform.view.CardForm
+    android:id="@+id/card_form"
+    android:translationY="110dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="66dp"
+        android:background="@color/colorAccent"
+        android:text="@string/app_b1"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="118dp"
+        android:layout_height="29dp"
+        android:translationX="60dp"
+        android:translationY="300dp"
+        android:text="@string/switch1_say"
+        android:textColorLink="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch2_say"
+        android:textColorLink="#424040"
+        android:translationX="60dp"
+        android:translationY="320dp" />
+
+
+</RelativeLayout>
