@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">MAD PROJECT</string>
+
+    <string name="logo">Logo</string>
+    <string name="avater">avater</string>
+    <string name="facebook">facebook</string>
+    <string name="text">text</string>
+    <string name="gmail">gmail</string>
+    <string name="textview">TextView</string>
+    <string name="bottom">bottom</string>
+    <string name="home_channel_labortary_payments_protfolio">Home Channel Labortary Payments Protfolio</string>
+    <string name="hep_b">HEP B</string>
+    <string name="fat">FAT</string>
+    <string name="pt_inr">PT/INR</string>
+    <string name="ppbs">PPBS</string>
+    <string name="hiv">HIV</string>
+    <string name="gct">GCT</string>
+    <string name="rbs">RBS</string>
+    <string name="mp">MP</string>
+    <string name="sfr">SFR</string>
+    <string name="fbs">FBS</string>
+    <string name="esr">ESR</string>
+    <string name="fbc">FBC</string>
+    <string name="ufr">UFR</string>
+    <string name="hcg">HCG</string>
+    <string name="bt_ct">BT/CT</string>
+    <string name="crp">CRP</string>
+    <string name="sat">SAT</string>
+    <string name="asot">ASOT</string>
+    <string name="rf">RF</string>
+    <string name="hb">HB</string>
+    <string name="vdrl">VDRL</string>
+    <string name="cpk">CPK</string>
+    <string name="t3">T3</string>
+    <string name="take_a_test">Take a Test</string>
+    <string name="ogtt">OGTT</string>
+    <string name="normal">Normal</string>
+    <string name="culture">Culture</string>
+
+
+    <!-- <string name="app_name">HealthCare+</string> 
+    <string name="logo">logo</string>-->
+    <string name="avatar">TODO</string>
+    <!-- <string name="facebook">facebook</string> -->
+    <string name="fb">TODO</string>
+    <string name="twit">twit</string>
+    <string name="email">TODO</string>
+    <string name="take_a_x_ray">Take a X-Ray</string>
+    <!-- <string name="home_channel_labortary_payments_protfolio">Home Channel Labortary Payments Protfolio</string> -->
+    <string name="x_ray">X- Ray</string>
+    <string name="xraypic">xraypic</string>
+
+
+    <!-- <string name="app_name">HealthCare+</string> -->
+    <string name="right_left_bilateral_hip">Right/Left/Bilateral Hip</string>
+    <string name="k_u_b">K.U.B.</string>
+    <string name="right_left_bilateral">Right/Left/Bilateral</string>
+    <string name="pelvis">Pelvis</string>
+    <string name="hepatobiliary_system">Hepatobiliary System</string>
+    <string name="brain">Brain</string>
+    <string name="spine">Spine</string>
+    <string name="thyroid">Thyroid</string>
+    <string name="home_channel_labortary_payments_portfolio">Home Channel Labortary Payments Portfolio</string>
+    <string name="eco">ECO</string>
+    <string name="mammogram">Mammogram</string>
+    <string name="neck_lump">Neck Lump</string>
+    <string name="r_l">R/L</string>
+    <string name="abdomen">Abdomen</string>
+    <string name="scrotum">Scrotum</string>
+    <string name="t_v_s">T.V.S.</string>
+    <string name="take_a_scan">Take a Scan</string>
+    <string name="scans">Scans</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_m_a_d3">MAD3</string>
+    <string name="hello_world">Hello Square World!</string>
+    <!--  <string name="gmail">gmail</string>
+    <string name="twit">twit</string>
+     <string name="logo">logo</string>
+    <string name="fb">fb</string> 
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+
+    <string name="patient_name">Patient Name :</string>
+    <string name="patient_id">Patient ID :</string>
+    <string name="request_form">Request Form</string>
+    <string name="e_mail">E-mail :</string>
+    <string name="mobile_number">Mobile Number :</string>
+    <string name="upload_the_prescription">Upload the prescription :</string>
+    <string name="for_payments"><![CDATA[For Payments >]]></string>
+    <string name="done">Done</string>
+    <string name="you_have_to_pay_rs_200_as_a_down_payment">*You have to Pay Rs.200 as a down payment</string>
+    <string name="business">business</string>
+    <string name="facebk">facebk</string>
+    <string name="twitter">twitter</string>
+    <!--  <string name="avatar">avatar</string>
+    <string name="gmail">gmail</string>
+    <string name="app_name">HealthCare+</string>
+    <string name="home_channel_labortary_payments_portfolio">Home Channel Labortary Payments Portfolio</string> -->
+
+
+    <string name="enter_name">Enter Name :</string>
+    <string name="phone_number">Phone Number :</string>
+    <string name="message">Message :</string>
+    <string name="email_healthcare_gmail_com">Email : healthcare@gmail.com</string>
+    <string name="phone_01123456789">Phone : 01123456789</string>
+    <string name="about_us">About Us</string>
+    <string name="button">Button</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="mainlogo">mainlogo</string>
+    <string name="mail">mail</string>
+    <!-- <string name="twit">twit</string>
+    <string name="gmail">gmail</string>
+    <string name="fb">fb</string>
+    <string name="avatar">avatar</string>
+    <string name="app_name">HealthCare+</string>
+    <string name="e_mail">E-mail :</string> -->
+
+   <!-- <string name="app_name">HealthCare+</string>
+    <string name="textview">TextView</string> -->
+    <string name="lab_tests"><![CDATA[Lab Tests >]]></string>
+ <!--   <string name="scans"><![CDATA[Scans >]]></string> -->
+    <string name="x_rays"><![CDATA[X - Rays >]]></string>
+    <string name="home_channel_labortary_payment_portfolio">Home Channel Labortary Payment Portfolio</string>
+
+</resources>
