@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:translationX="-50dp"
+        android:translationY="-160dp"
+        app:srcCompat="@drawable/finnalogo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-8dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t1"
+        android:translationX="16dp"
+        android:translationY="140dp"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t2"
+        android:translationX="16dp"
+        android:translationY="180dp"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t3"
+        android:translationX="16dp"
+        android:translationY="215dp"
+
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t4"
+        android:translationX="16dp"
+        android:translationY="250dp"
+
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t5"
+        android:textColorLink="#000000"
+        android:translationX="16dp"
+        android:translationY="290dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b3"
+        android:translationX="29dp"
+        android:translationY="364dp"
+        android:background="@color/colorAccent"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="182dp"
+        android:layout_height="31dp"
+        android:text="@string/r1"
+        android:translationX="210dp"
+        android:translationY="383dp"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-35dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check1"
+        android:translationX="29dp"
+        android:translationY="467dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check2"
+        android:translationX="29dp"
+        android:translationY="427dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

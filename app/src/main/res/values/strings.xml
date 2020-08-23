@@ -3,4 +3,17 @@
     <string name="switch1_say">Save this card</string>
     <string name="switch2_say">You can remove card at any time</string>
     <string name="app_b1">DONE</string>
+    <string name="add_post">ADD POST</string>
+    <string name="edit_post">EDIT POST</string>
+    <string name="delete_post">DELETE POST</string>
+    <string name="t1">Doctor fee:</string>
+    <string name="t2">Hospital fee:</string>
+    <string name="t3">Laboratory services:</string>
+    <string name="t4">Tax:</string>
+    <string name="t5">Total:</string>
+    <string name="b3">PAY NOW</string>
+    <string name="r1">Send bill info to email </string>
+    <string name="check1">PayPal </string>
+    <string name="check2">Visa </string>
+    <string name="button4">ADD CARD </string>
 </resources>
