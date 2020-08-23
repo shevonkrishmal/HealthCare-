@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updatePP">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="609dp"
+            android:layout_height="862dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.429"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.503"
+            app:srcCompat="@drawable/pngtree_blue_hospital_medical_western_medicine_poster_background_backgroundmedical_backgrounddoctor_backgroundhospital_image_63770" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="96dp"
+            android:layout_height="62dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.002"
+            app:srcCompat="@drawable/finnalogo" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="108dp"
+            android:layout_height="103dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.289"
+            app:srcCompat="@drawable/download__1_" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="357dp"
+            android:layout_height="43dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/age"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533"
+            tools:text="Age" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="360dp"
+            android:layout_height="44dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/address"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.465" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="355dp"
+            android:layout_height="49dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/mobile_number"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textColorHint="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.375"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.605" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="354dp"
+            android:layout_height="49dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.348"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.674" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="357dp"
+            android:layout_height="47dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textColorHint="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.744" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword2"
+            android:layout_width="360dp"
+            android:layout_height="42dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/re_enter_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textColorHint="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.806" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="243dp"
+            android:layout_height="54dp"
+            android:backgroundTint="#3F51B5"
+            android:text="@string/sign_up"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.935"
+            tools:text="Update Profile" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Picture"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.412" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/enter_patient_id"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.158"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="259dp"
+            android:layout_height="49dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Edit Patient Profile"
+            android:textColor="#3F51B5"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.69"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.051" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="37dp"
+            android:layout_height="32dp"
+            android:tint="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.389"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
