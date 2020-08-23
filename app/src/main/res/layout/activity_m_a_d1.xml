@@ -151,15 +151,15 @@
             app:layout_constraintTop_toTopOf="@+id/top"
             app:layout_constraintVertical_bias="0.161" />
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="212dp"
-            android:layout_height="211dp"
-            android:contentDescription="@string/xraypic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dental_radiography_room_82574_3656" />
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="212dp"
+        android:layout_height="211dp"
+        android:contentDescription="@string/xraypic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dental" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

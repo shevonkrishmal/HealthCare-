@@ -72,7 +72,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Navi"
             app:layout_constraintVertical_bias="0.303"
-            app:srcCompat="@drawable/people_working_science_laboratory_23_2148503336" />
+            app:srcCompat="@drawable/lab" />
 
         <TextView
             android:id="@+id/blood"
@@ -127,7 +127,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.299"
-            app:srcCompat="@drawable/medical_background_design_1212_382" />
+            app:srcCompat="@drawable/medical" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -139,7 +139,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.635"
-            app:srcCompat="@drawable/medical_examination_diagnosis_concept_74855_7616" />
+            app:srcCompat="@drawable/medicalex" />
 
         <TextView
             android:id="@+id/Bottom_Navi"
@@ -190,7 +190,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.959"
-            app:srcCompat="@drawable/kkk" />
+            app:srcCompat="@drawable/lk" />
 
         <ImageView
             android:id="@+id/email"
