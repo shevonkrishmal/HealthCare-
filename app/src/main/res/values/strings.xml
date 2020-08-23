@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">HealthCare+</string>
+
+    <string name="logo">LOGO</string>
+    <string name="t1">Doctor</string>
+    <string name="Full_name">Name</string>
+    <string name="doctor_pic">dimage</string>
+    <string name="name">Name</string>
+    <string name="specialization">specialization</string>
+    <string name="nic">NIC</string>
+    <string name="gmc_reference_number">GMC reference number</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="doctor_Ppic">profile_pic</string>
+    <string name="button1">Button</string>
+    <string name="my_profile">MY PROFILE</string>
+    <string name="doctor_name">D. R. karunarathna</string>
+    <string name="customize_channeling">Customize Channeling</string>
+    <string name="week_schedule">Week schedule</string>
+    <string name="p11">Full_name : D R karunarathna</string>
+    <string name="pp12">Specialization : Nurophisician</string>
+    <string name="pp13">GMC number : 1010</string>
+    <string name="pp14">NIC : 897829291V</string>
+    <string name="pp15">Date of Birth : 01/11/1947</string>
+    <string name="pp16">Mobile Number : 0772678043</string>
+    <string name="pp17">Email : abc@gmail.com</string>
+    <string name="editButton">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="new_password">New password</string>
+    <string name="ep_text2">Change password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="savebtn">Save</string>
+    <string name="customize_channeling_text1">Customize_channeling</string>
+    <string name="room_number">Room Number : 20B</string>
+    <string name="available_time">Available Time : 8AMto 12PM</string>
+    <string name="available_days">Available days :</string>
+    <string name="max_num_of_channel_per_day">Max num of channel per day : 20</string>
+    <string name="sunday">Sunday</string>
+    <string name="saturday">Saturday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="doctor_fee">Doctor fee : Rs.2500.00</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="confirmbtn">Confirm</string>
+    <string name="e_room_num">e_room-num</string>
+    <string name="week_scheduleq">Week Schedule</string>
+    <string name="channelid">ChannelID</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="_1">1</string>
+    <string name="shevon">shevon</string>
+    <string name="_2">2</string>
+    <string name="thyage">Thyage</string>
+    <string name="_3">3</string>
+    <string name="shenal">Shenal</string>
+    <string name="_4">4</string>
+    <string name="kasuni">Kasuni</string>
+    <string name="_5">5</string>
+    <string name="rajindu">Rajindu</string>
+
+
+</resources>
