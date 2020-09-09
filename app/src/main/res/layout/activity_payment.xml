@@ -11,12 +11,16 @@
         android:id="@+id/imageView2"
         android:layout_width="450dp"
         android:layout_height="450dp"
-        android:translationX="-50dp"
-        android:translationY="-160dp"
+
+        android:translationX="0dp"
+        android:translationY="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
         app:srcCompat="@drawable/finnalogo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-8dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -25,8 +29,11 @@
         android:text="@string/t1"
         android:translationX="16dp"
         android:translationY="140dp"
-        tools:ignore="MissingConstraints"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -46,7 +53,9 @@
         android:translationX="16dp"
         android:translationY="215dp"
 
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-4dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -71,13 +80,19 @@
         tools:layout_editor_absoluteY="39dp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/paybtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
         android:text="@string/b3"
         android:translationX="29dp"
-        android:translationY="364dp"
-        android:background="@color/colorAccent"
+        android:translationY="355dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <RadioButton
