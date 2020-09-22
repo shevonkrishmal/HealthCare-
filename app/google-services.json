@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "6976474311",
+    "firebase_url": "https://admin-391c0.firebaseio.com",
+    "project_id": "admin-391c0",
+    "storage_bucket": "admin-391c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6976474311:android:d1d7c6a9fa7540a2e802e2",
+        "android_client_info": {
+          "package_name": "com.example.healthcarepluse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6976474311-p325j2ta43ddctt93um1gaadoj8pr73a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGK05dHhim5nckMGX9Of30sr3z1e2NszY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6976474311-p325j2ta43ddctt93um1gaadoj8pr73a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

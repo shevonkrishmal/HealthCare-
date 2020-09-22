@@ -12,16 +12,18 @@ import android.widget.Toast;
 
 import com.braintreepayments.cardform.view.CardForm;
 
-public class MainActivity extends AppCompatActivity {
+public class addCard extends AppCompatActivity {
 
         CardForm cardForm;
         Button buy;
         AlertDialog.Builder alertBuilder;
 
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
 
             cardForm = findViewById(R.id.card_form);
             buy = findViewById(R.id.btnBuy);
@@ -31,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
 
                     .mobileNumberExplanation("SMS is required on this number")
-                    .setup(MainActivity.this);
+                    .setup(addCard.this);
             cardForm.getCvvEditText().setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
             buy.setOnClickListener(new View.OnClickListener() {
                 @Override
 
                 public void onClick(View view) {
                     if (cardForm.isValid()) {
-                        alertBuilder = new AlertDialog.Builder(MainActivity.this);
+                        alertBuilder = new AlertDialog.Builder(addCard.this);
                         alertBuilder.setTitle("Confirm before purchase");
                         alertBuilder.setMessage("Card number: " + cardForm.getCardNumber() + "\n" +
                                 "Card expiry date: " + cardForm.getExpirationDateEditText().getText().toString() + "\n" +
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
-                                Toast.makeText(MainActivity.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
+                                Toast.makeText(addCard.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
                             }
                         }));
                         alertBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         alertDialog.show();
 
                     } else {
-                        Toast.makeText(MainActivity.this, "Please complete the form", Toast.LENGTH_LONG).show();
+                        Toast.makeText(addCard.this, "Please complete the form", Toast.LENGTH_LONG).show();
                     }
                 }
             });

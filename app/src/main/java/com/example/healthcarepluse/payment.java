@@ -23,7 +23,7 @@ public class payment extends AppCompatActivity {
         });
     }
     private void  moveToMainActivity(){
-        Intent intent = new Intent(payment.this, MainActivity.class);
+        Intent intent = new Intent(payment.this, addCard.class);
         startActivity(intent);
      }
 }

@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".addCard">
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="450dp"
-        android:layout_height="450dp"
+        android:layout_width="362dp"
+        android:layout_height="84dp"
 
-        android:translationX="0dp"
-        android:translationY="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578"
-        app:srcCompat="@drawable/finnalogo"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/logo"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -76,8 +76,8 @@
         android:translationX="16dp"
         android:translationY="290dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="39dp" />
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/paybtn"
@@ -114,7 +114,7 @@
         android:text="@string/check1"
         android:translationX="29dp"
         android:translationY="467dp"
-        />
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -123,6 +123,6 @@
         android:text="@string/check2"
         android:translationX="29dp"
         android:translationY="427dp"
-        />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

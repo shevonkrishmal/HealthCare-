@@ -16,4 +16,9 @@
     <string name="check1">PayPal </string>
     <string name="check2">Visa </string>
     <string name="button4">ADD CARD </string>
+    <array name="genres">
+        <item>admin</item>
+        <item>admi3</item>
+        <item>sdsks</item>
+    </array>
 </resources>
