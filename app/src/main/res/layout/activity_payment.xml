@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/d4"
     tools:context=".addCard">
 
 
@@ -42,8 +43,7 @@
         android:text="@string/t2"
         android:translationX="16dp"
         android:translationY="180dp"
-        tools:ignore="MissingConstraints"
-        />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"

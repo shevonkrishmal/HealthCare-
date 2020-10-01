@@ -29,7 +29,7 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EditProfile extends AppCompatActivity {
+public class adminEditProfile extends AppCompatActivity {
 
     public static final String TAG = "TAG";
     EditText profileFullName,profileEmail,profilePhone;
@@ -81,7 +81,7 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
-                    Toast.makeText(EditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(adminEditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -97,17 +97,17 @@ public class EditProfile extends AppCompatActivity {
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), addCard.class));
+                                Toast.makeText(adminEditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), Admin.class));
                                 finish();
                             }
                         });
-                        Toast.makeText(EditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(adminEditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(EditProfile.this,   e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(adminEditProfile.this,   e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 

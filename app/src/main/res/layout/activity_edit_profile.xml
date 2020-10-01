@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfile">
+    android:background="@drawable/d5"
+    tools:context=".adminEditProfile">
 
     <EditText
         android:id="@+id/profileFullName"
@@ -52,8 +53,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
-        android:inputType="phone"
         android:hint="Phone"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileEmailAddress" />
@@ -64,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Save"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

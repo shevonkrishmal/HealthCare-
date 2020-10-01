@@ -39,6 +39,7 @@ public class Admin extends AppCompatActivity {
     String userId;
     Button resendCode;
     Button resetPassLocal,changeProfileImage;
+   private Button AddPost;
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
@@ -52,7 +53,7 @@ public class Admin extends AppCompatActivity {
         fullName = findViewById(R.id.profileName);
         email    = findViewById(R.id.profileEmail);
         resetPassLocal = findViewById(R.id.resetPasswordLocal);
-
+        AddPost =(Button) findViewById(R.id.addPost);
         profileImage = findViewById(R.id.profileImage);
         changeProfileImage = findViewById(R.id.changeProfile);
 
@@ -66,6 +67,7 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(profileImage);
+
             }
         });
 
@@ -164,7 +166,7 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // open gallery
-                Intent i = new Intent(v.getContext(),EditProfile.class);
+                Intent i = new Intent(v.getContext(), adminEditProfile.class);
                 i.putExtra("fullName",fullName.getText().toString());
                 i.putExtra("email",email.getText().toString());
                 i.putExtra("phone",phone.getText().toString());
@@ -175,6 +177,12 @@ public class Admin extends AppCompatActivity {
         });
 
 
+        AddPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAddpost();
+            }
+        });
     }
 
 
@@ -182,8 +190,13 @@ public class Admin extends AppCompatActivity {
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();//logout
-        startActivity(new Intent(getApplicationContext(),Login.class));
+        startActivity(new Intent(getApplicationContext(), adminLogin.class));
         finish();
+    }
+
+    public void openAddpost(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 

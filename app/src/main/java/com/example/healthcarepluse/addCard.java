@@ -22,7 +22,7 @@ public class addCard extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.add_card);
 
 
             cardForm = findViewById(R.id.card_form);
