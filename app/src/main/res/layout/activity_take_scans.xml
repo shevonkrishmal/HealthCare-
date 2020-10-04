@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TakeScans">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        app:srcCompat="@drawable/finnalogo" />
+
+    <TextView
+        android:id="@+id/titleTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7AB0DC"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Scans"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="30sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundScan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/abx">
+
+        <ImageView
+            android:id="@+id/TakeScans"
+            android:layout_width="335dp"
+            android:layout_height="296dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147"
+            app:srcCompat="@drawable/undraw_medicine_b1ol" />
+
+        <Button
+            android:id="@+id/imagex"
+            android:layout_width="182dp"
+            android:layout_height="44dp"
+            android:background="#4C9AD8"
+            android:keepScreenOn="false"
+            android:text="Take a Scan"
+            android:textColor="#F4F0F0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.828" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

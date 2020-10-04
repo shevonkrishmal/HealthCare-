@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF0F1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:backgroundTint="#FCFCFC"
+        android:backgroundTintMode="screen"
+        android:hapticFeedbackEnabled="true"
+        app:srcCompat="@drawable/finnalogo" />
+
+    <TextView
+        android:id="@+id/titleLab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7AB0DC"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Laboratory"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="30sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/abx"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLab"
+            android:layout_width="210dp"
+            android:layout_height="143dp"
+            android:background="@drawable/lab"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.198"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <TextView
+            android:id="@+id/labTests"
+            android:layout_width="84dp"
+            android:layout_height="42dp"
+            android:background="#BADAF4"
+            android:text="Lab Tests"
+            android:textAlignment="center"
+            android:textColor="#040207"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.142" />
+
+        <Button
+            android:id="@+id/btnX"
+            android:layout_width="206dp"
+            android:layout_height="139dp"
+            android:background="@drawable/medical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.204"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <TextView
+            android:id="@+id/xRay"
+            android:layout_width="72dp"
+            android:layout_height="42dp"
+            android:background="#BADAF4"
+            android:text="X-Rays"
+            android:textAlignment="center"
+            android:textColor="#040207"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499" />
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="211dp"
+            android:layout_height="148dp"
+            android:background="@drawable/medicalex"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.963" />
+
+        <TextView
+            android:id="@+id/Scans"
+            android:layout_width="69dp"
+            android:layout_height="39dp"
+            android:background="#BADAF4"
+            android:text="Scans"
+            android:textAlignment="center"
+            android:textColor="#040207"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.842" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

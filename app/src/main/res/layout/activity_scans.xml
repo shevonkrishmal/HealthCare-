@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Scans">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        app:srcCompat="@drawable/finnalogo" />
+
+    <TextView
+        android:id="@+id/titleTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7AB0DC"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Scans"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="30sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backScans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/abx">
+
+        <TextView
+            android:id="@+id/scans14"
+            android:layout_width="117dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Mammogram"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.354" />
+
+        <TextView
+            android:id="@+id/scans13"
+            android:layout_width="117dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Neck Lump"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scans12"
+            android:layout_width="117dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Right/Left/Bilateral Hib"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.639" />
+
+        <TextView
+            android:id="@+id/scans10"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="ECO"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+
+        <TextView
+            android:id="@+id/scans9"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Scrotum"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.354" />
+
+        <TextView
+            android:id="@+id/scans8"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="R/L"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Scans"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="K.U.B."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <TextView
+            android:id="@+id/scans6"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Tyroid"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <TextView
+            android:id="@+id/scans7"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="T.V.S."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.639" />
+
+        <TextView
+            android:id="@+id/scans2"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Pelvis"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+
+        <TextView
+            android:id="@+id/scans3"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Abdomen"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.354" />
+
+        <TextView
+            android:id="@+id/scans5"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Brain"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scans4"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Sprine"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.641" />
+
+        <TextView
+            android:id="@+id/scans"
+            android:layout_width="117dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Hepatobiliary System"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <TextView
+            android:id="@+id/scans11"
+            android:layout_width="117dp"
+            android:layout_height="45dp"
+            android:background="#99DCE4"
+            android:text="Right/Left/Bilateral"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1E1C1C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+
+
+        <Button
+            android:id="@+id/buttonTest"
+            android:layout_width="152dp"
+            android:layout_height="54dp"
+            android:background="#1880D1"
+            android:text="Take a Test"
+            android:textColor="#FBFBFB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.855" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

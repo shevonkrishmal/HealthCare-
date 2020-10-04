@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TakeX_Ray">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        app:srcCompat="@drawable/finnalogo" />
+
+    <TextView
+        android:id="@+id/titleTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7AB0DC"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="X-Ray"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="30sp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundX_Ray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/abx">
+
+
+        <Button
+            android:id="@+id/TakeXray"
+            android:layout_width="182dp"
+            android:layout_height="44dp"
+            android:background="#4C9AD8"
+            android:keepScreenOn="false"
+            android:text="Take a X-RAY"
+            android:textColor="#F4F0F0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.828" />
+
+        <ImageView
+            android:id="@+id/imagex"
+            android:layout_width="364dp"
+            android:layout_height="350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.176"
+            app:srcCompat="@drawable/undraw_medical_research_qg4d" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.healthcare">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".adminRegister"></activity>
+        <activity android:name=".DeleteNeedAHelp" />
+        <activity android:name=".UpdateNeedAHelp" />
+        <activity android:name=".ReadNeedAHelp" />
+        <activity android:name=".DeleteRequiestForm" />
+        <activity android:name=".UpdateRequestForm" />
+        <activity android:name=".ReadRequestForm" />
+        <activity android:name=".Need_A_Help" />
+        <activity android:name=".RequestForm" />
+        <activity android:name=".X_Ray" />
+        <activity android:name=".Scans" />
+        <activity android:name=".TakeX_Ray" />
+        <activity android:name=".TakeScans" />
+        <activity android:name=".Tests" />
+        <activity android:name=".LabTest" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
