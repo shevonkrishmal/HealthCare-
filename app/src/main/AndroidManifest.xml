@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.healthcare">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Appoinment"></activity>
-        <activity android:name=".FindDoc" />
-        <activity android:name=".DeletePP" />
-        <activity android:name=".updatePP" />
+        <activity android:name=".Opd"></activity>
+        <activity android:name=".heart" />
+        <activity android:name=".Vog" />
+        <activity android:name=".Ent" />
+        <activity android:name=".Eye" />
+        <activity android:name=".Brain" />
+        <activity android:name=".Appoinment" />
+        <activity android:name=".ViewAdd" />
+        <activity android:name=".GetAppoinment" />
+        <activity android:name=".ViewTest" />
+        <activity android:name=".ViewDoctor" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".patientProfile" />
+        <activity android:name=".patientLogin" />
+        <activity android:name=".patientReg" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
