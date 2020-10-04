@@ -44,7 +44,7 @@ public class addCard extends AppCompatActivity {
                         alertBuilder.setTitle("Confirm before purchase");
                         alertBuilder.setMessage("Card number: " + cardForm.getCardNumber() + "\n" +
                                 "Card expiry date: " + cardForm.getExpirationDateEditText().getText().toString() + "\n" +
-                                "Card CVV: " + cardForm.getCvv() + "\n" +
+                                "Total amount: " +"LKR600" +
 
 
                         alertBuilder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {

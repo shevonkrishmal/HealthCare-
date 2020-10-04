@@ -6,7 +6,7 @@ public class adminUpload {
     private String mImageUrl;
     private String mKey;
     public adminUpload() {
-        //empty constructor needed
+
     }
     public adminUpload(String name, String imageUrl) {
         if (name.trim().equals("")) {

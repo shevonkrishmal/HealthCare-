@@ -15,13 +15,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".UserAddViwe"></activity>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".addCard" />
+        <activity android:name=".adminLogin" />
         <activity android:name=".Admin" />
         <activity android:name=".ImagesActivity"/>
         <activity android:name=".adminRegister" />
         <activity android:name=".adminEditProfile" />
-        <activity android:name=".payment" />
-        <activity android:name=".adminLogin">
+        <activity android:name=".addCard" />
+        <activity android:name=".payment">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

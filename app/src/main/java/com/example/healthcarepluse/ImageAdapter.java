@@ -33,8 +33,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         adminUpload adminUploadCurrent = mAdminUploads.get(position);
         holder.textViewName.setText(adminUploadCurrent.getName());
         Picasso.get()
-                .load(adminUploadCurrent.getImageUrl())
-                .placeholder(R.mipmap.ic_launcher)
+                .load(adminUploadCurrent.getImageUrl())                .placeholder(R.mipmap.ic_launcher)
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b1"
+    android:background="@drawable/back2"
     tools:context="com.codingdemos.creditor.MainActivity">
 
 
@@ -40,16 +40,16 @@
 
     <Button
         android:id="@+id/btnBuy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="416dp"
+        android:layout_height="47dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/walpaper"
         android:text="@string/app_b1"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.925"
-        tools:layout_editor_absoluteX="44dp" />
+        tools:layout_editor_absoluteX="-5dp" />
 
     <TextView
         android:id="@+id/textView"
