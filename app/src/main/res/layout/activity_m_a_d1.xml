@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MAD1">
+
+    <Button
+        android:id="@+id/xray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_a_x_ray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <TextView
+            android:id="@+id/top"
+            android:layout_width="409dp"
+            android:layout_height="108dp"
+            android:background="#B3D8F4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.006"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="410dp"
+        android:layout_height="94dp"
+        android:background="#B3D8F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+            android:id="@+id/logo"
+            android:layout_width="127dp"
+            android:layout_height="105dp"
+            android:contentDescription="@string/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/top"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/finnalogo" />
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="74dp"
+            android:layout_height="75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/top"
+            app:layout_constraintHorizontal_bias="0.898"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/avatar"
+            android:contentDescription="@string/avatar" />
+
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="49dp"
+            android:layout_height="47dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom"
+            app:layout_constraintEnd_toEndOf="@+id/bottom"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top"
+            app:layout_constraintVertical_bias="0.961"
+            app:srcCompat="@drawable/facebooko"
+            android:contentDescription="@string/fb" />
+
+    <ImageView
+        android:id="@+id/google"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:contentDescription="@string/facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top"
+        app:layout_constraintVertical_bias="0.955"
+        app:srcCompat="@drawable/lk" />
+
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom"
+            app:layout_constraintEnd_toEndOf="@+id/bottom"
+            app:layout_constraintHorizontal_bias="0.621"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.962"
+            app:srcCompat="@drawable/th"
+            android:contentDescription="@string/email" />
+
+        <ImageView
+            android:id="@+id/twit"
+            android:layout_width="47dp"
+            android:layout_height="43dp"
+            android:contentDescription="@string/twit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bottom"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.956"
+            app:srcCompat="@drawable/twittero" />
+
+        <TextView
+            android:id="@+id/x_ray"
+            android:layout_width="415dp"
+            android:layout_height="58dp"
+            android:background="#CDCACA"
+            android:text="@string/x_ray"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#777676"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.251" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="413dp"
+            android:layout_height="61dp"
+            android:background="#949ED6"
+            android:text="@string/home_channel_labortary_payments_protfolio"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#777676"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top"
+            app:layout_constraintVertical_bias="0.161" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="212dp"
+        android:layout_height="211dp"
+        android:contentDescription="@string/xraypic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dental" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MAD3">
+
+        <TextView
+            android:id="@+id/name4"
+            android:layout_width="343dp"
+            android:layout_height="38dp"
+            android:text="@string/patient_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.364" />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="345dp"
+            android:layout_height="40dp"
+            android:text="@string/e_mail"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <TextView
+            android:id="@+id/top2"
+            android:layout_width="413dp"
+            android:layout_height="94dp"
+            android:background="#B3D8F4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/top4" />
+
+        <TextView
+            android:id="@+id/top4"
+            android:layout_width="409dp"
+            android:layout_height="108dp"
+            android:background="#B3D8F4"
+            app:layout_constraintBottom_toBottomOf="@+id/top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/avat"
+            android:layout_width="69dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/avatar" />
+
+        <ImageView
+            android:id="@+id/log"
+            android:layout_width="143dp"
+            android:layout_height="115dp"
+            android:contentDescription="@string/business"
+            app:layout_constraintBottom_toBottomOf="@+id/top4"
+            app:layout_constraintEnd_toEndOf="@+id/top2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/finnalogo" />
+
+        <ImageView
+            android:id="@+id/fbook"
+            android:layout_width="54dp"
+            android:layout_height="38dp"
+            android:contentDescription="@string/facebk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.955"
+            app:srcCompat="@drawable/facebooko" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/gmail"
+            app:layout_constraintBottom_toBottomOf="@+id/top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.402"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.955"
+            app:srcCompat="@drawable/lk" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="53dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/e_mail"
+            app:layout_constraintBottom_toBottomOf="@+id/top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.663"
+            app:layout_constraintStart_toStartOf="@+id/top2"
+            app:layout_constraintTop_toTopOf="@+id/top4"
+            app:layout_constraintVertical_bias="0.954"
+            app:srcCompat="@drawable/th" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="40dp"
+            android:layout_height="41dp"
+            android:contentDescription="@string/twitter"
+            app:layout_constraintBottom_toBottomOf="@+id/top2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="@+id/top2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.955"
+            app:srcCompat="@drawable/twittero" />
+
+        <TextView
+            android:id="@+id/form"
+            android:layout_width="412dp"
+            android:layout_height="57dp"
+            android:background="#DAD9D9"
+            android:text="@string/request_form"
+            android:textAlignment="center"
+            android:textColor="#7C7474"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.243" />
+
+        <TextView
+            android:id="@+id/Nav"
+            android:layout_width="412dp"
+            android:layout_height="57dp"
+            android:background="#7481CA"
+            android:text="@string/home_channel_labortary_payments_portfolio"
+            android:textAlignment="viewStart"
+            android:textColor="#0B0A0A"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.158" />
+
+        <TextView
+            android:id="@+id/Phone"
+            android:layout_width="344dp"
+            android:layout_height="38dp"
+            android:text="@string/mobile_number"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.61" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="344dp"
+            android:layout_height="38dp"
+            android:text="@string/upload_the_prescription"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.683" />
+
+        <TextView
+            android:id="@+id/phone2"
+            android:layout_width="347dp"
+            android:layout_height="48dp"
+            android:text="@string/you_have_to_pay_rs_200_as_a_down_payment"
+            android:textColor="#D55050"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.754" />
+
+        <TextView
+            android:id="@+id/ID"
+            android:layout_width="348dp"
+            android:layout_height="39dp"
+            android:text="@string/patient_id"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.442" />
+
+        <Button
+            android:id="@+id/buttondone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.844" />
+
+        <Button
+            android:id="@+id/buttondone2"
+            android:layout_width="205dp"
+            android:layout_height="46dp"
+            android:text="@string/for_payments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.845" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
