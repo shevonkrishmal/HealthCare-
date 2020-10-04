@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "916850275199",
+    "firebase_url": "https://healthcare-c1098.firebaseio.com",
+    "project_id": "healthcare-c1098",
+    "storage_bucket": "healthcare-c1098.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916850275199:android:c2cc2bbcf3fcf5d910e04a",
+        "android_client_info": {
+          "package_name": "com.example.healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916850275199-4hrfi7jjva4fn0kdnmp9hcru2rjq7v28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthcare",
+            "certificate_hash": "ba2aa59efc32fb98a62b6b6b9b1fbf4400f24eec"
+          }
+        },
+        {
+          "client_id": "916850275199-ug8d22dckare08kkv6rjj18u2ghm1sm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-iHLeHH0Q4Zhui9oaWdQ0it8iL2uO4D4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916850275199-ug8d22dckare08kkv6rjj18u2ghm1sm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_1"
+    tools:context=".ViewDoctor">
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="437dp"
+        android:layout_height="225dp"
+        android:background="@drawable/bi_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="371dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/finnalogo__1_" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="379dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Search A Doctor"
+        android:textAlignment="center"
+        android:textColor="#FAFAFB"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/eyeBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/eye_icon"
+        android:backgroundTint="#22B5F8"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/aclonica"
+        android:text="EYE PHYSICIAN"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/entBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ear_icon"
+        android:backgroundTint="#22B5F8"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/aclonica"
+        android:text="ENT PHYSICIAN"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <Button
+        android:id="@+id/brainBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/brain_n"
+        android:fontFamily="@font/aclonica"
+        android:text="NEUROLOGISTS"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <Button
+        android:id="@+id/heartBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/heart_icon"
+        android:backgroundTint="#22B5F8"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/aclonica"
+        android:text="CARDIOLOGIST"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/opdBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_baseline_people_alt_24"
+        android:backgroundTint="#22B5F8"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/aclonica"
+        android:text="GENARAL PHYSICIAN"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <Button
+        android:id="@+id/vogBtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/prg_icon"
+        android:backgroundTint="#22B5F8"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/aclonica"
+        android:text="VOG SURGEON"
+        android:textColor="#172DA5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.419" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
