@@ -202,7 +202,8 @@ public class Doctor_EditProfile extends AppCompatActivity {
             // [START delete_user]
         doctor = fAuth.getCurrentUser();
      fStore.collection("Doctors").document(doctor.getUid()).delete();
-    //mDatabase.getKey(doctor.getUid()).de;
+    // String value = mDatabase.child("Doctor").getKey();
+
 
         doctor.delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
