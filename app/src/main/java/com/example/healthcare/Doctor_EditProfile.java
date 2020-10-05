@@ -13,12 +13,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -39,6 +42,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
     public Uri imageUri = null;
     EditText profileFullName,profileEmail,profilePhone,profilegmc,profilesplzn;
 
+
     ImageView profileImageView;
     Button saveBtn;
     FirebaseAuth fAuth;
@@ -46,6 +50,9 @@ public class Doctor_EditProfile extends AppCompatActivity {
     FirebaseUser doctor;
     StorageReference storageReference;
     private String DoctorID;
+
+    private FirebaseDatabase database;
+    private DatabaseReference mDatabase;
 
 
 
@@ -73,13 +80,26 @@ public class Doctor_EditProfile extends AppCompatActivity {
         profilegmc = findViewById(R.id.GMC);
         profilesplzn =findViewById(R.id.Specialization);
 
+
+
+
+
+
         profileImageView = findViewById(R.id.profileImageView);
         saveBtn = findViewById(R.id.saveProfileInfo);
+
+
+
+
+
+        database = FirebaseDatabase.getInstance();
+        mDatabase = database.getReference().child("Doctor");
 
 
 //getdata from database
         DoctorID = fAuth.getCurrentUser().getUid();
         doctor = fAuth.getCurrentUser();
+
 
         final DocumentReference documentReference = fStore.collection("Doctors").document(DoctorID);
 
@@ -93,9 +113,11 @@ public class Doctor_EditProfile extends AppCompatActivity {
                 profilesplzn.setText(documentSnapshot.getString("Specialization"));
 
 
+
+
+
             }
         });
-
 
 
 
@@ -137,6 +159,10 @@ public class Doctor_EditProfile extends AppCompatActivity {
                         edited.put("phone",profilePhone.getText().toString());
                         edited.put("gmc",profilegmc.getText().toString());
                         edited.put("Specialization",profilesplzn.getText().toString());
+
+
+                        mDatabase.child(DoctorID).updateChildren(edited);
+
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
