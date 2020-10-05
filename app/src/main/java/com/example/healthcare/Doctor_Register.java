@@ -179,6 +179,7 @@ public class Doctor_Register extends AppCompatActivity {
                             user.put("Doctorfee",Dfee);
                             user.put("Specialization",Specialization);
 
+                            //realtime db
                             mDatabase.child(DoctorID).setValue(user);
 
 
@@ -203,6 +204,7 @@ public class Doctor_Register extends AppCompatActivity {
 
 
                     }
+
                 });
 
 
