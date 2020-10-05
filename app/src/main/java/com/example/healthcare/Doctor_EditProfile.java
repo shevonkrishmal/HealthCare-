@@ -99,9 +99,6 @@ public class Doctor_EditProfile extends AppCompatActivity {
 
 
 
-
-
-
         final StorageReference pofileRef = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
         pofileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

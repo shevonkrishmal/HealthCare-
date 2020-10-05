@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Doctor_Register extends AppCompatActivity {
-
-
-
+    private static String TAG ="tag";
     private EditText fullname,email,password,Phone,gmc,roomnum,adate,atime,dfee,splzn;
     private Button registerbtn;
     private TextView loginbtn;
@@ -190,14 +189,12 @@ public class Doctor_Register extends AppCompatActivity {
 
                                 }
                             });
-                          // FirebaseUser doctor = auth.getCurrentUser();
-                         //  updateUI(doctor);
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                         }
                         else {
                             // If sign in fails, display a message to the user.
-                           // Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             Toast.makeText(Doctor_Register.this,"Error" + task.getException().getMessage(),Toast.LENGTH_LONG).show();
 
                         }

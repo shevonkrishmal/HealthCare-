@@ -12,12 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Doctor_profile_PV"></activity>
-        <activity android:name=".Doctor_channelingDetails_edit" />
+        <activity android:name=".Doctor_channelingDetails_edit"  />
         <activity android:name=".Doctor_appoinments" />
         <activity android:name=".Doctor_channelingDetails" />
         <activity android:name=".Doctor_EditProfile" />
         <activity android:name=".Doctor_Profile" />
-
+        <activity android:name=".Doctor_list"/>
         <activity android:name=".Doctor_Login" />
         <activity android:name=".Doctor_Register" />
         <activity android:name=".MainActivity" >
