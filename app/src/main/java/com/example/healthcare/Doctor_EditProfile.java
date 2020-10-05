@@ -15,8 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -44,6 +46,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
 
     ImageView profileImageView;
     Button saveBtn;
+    Button deleteBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser doctor;
@@ -79,16 +82,9 @@ public class Doctor_EditProfile extends AppCompatActivity {
         profilegmc = findViewById(R.id.GMC);
         profilesplzn =findViewById(R.id.Specialization);
 
-
-
-
-
-
         profileImageView = findViewById(R.id.profileImageView);
         saveBtn = findViewById(R.id.saveProfileInfo);
-
-
-
+        deleteBtn =findViewById(R.id.deletbtn);
 
 
         database = FirebaseDatabase.getInstance();
@@ -118,6 +114,13 @@ public class Doctor_EditProfile extends AppCompatActivity {
             }
         });
 
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteUser();
+
+            }
+        });
 
 
         final StorageReference pofileRef = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
@@ -160,7 +163,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
                         edited.put("Specialization",profilesplzn.getText().toString());
 
                         //update realtime db
-                        mDatabase.child(DoctorID).updateChildren(edited);
+                     //   mDatabase.child(DoctorID).updateChildren(edited);
 
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -194,6 +197,32 @@ public class Doctor_EditProfile extends AppCompatActivity {
 
     }
 
+    private void deleteUser() {
+
+            // [START delete_user]
+        doctor = fAuth.getCurrentUser();
+     fStore.collection("Doctors").document(doctor.getUid()).delete();
+    //mDatabase.getKey(doctor.getUid()).de;
+
+        doctor.delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Doctor_EditProfile.this,"Your profile Deleted",Toast.LENGTH_LONG).show();
+
+                            startActivity(new Intent(getApplicationContext(), Doctor_Login.class));
+                            Log.d(TAG, "User account deleted.");
+
+                        }
+                    }
+                });
+
+            // [END delete_user]
+
+    }
+
+
     private void choosePicture() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
@@ -216,7 +245,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                //Toast.makeText(Doctor_Profile.this,"Image uploaded",Toast.LENGTH_LONG).show();
+                Toast.makeText(Doctor_EditProfile.this,"Image uploaded",Toast.LENGTH_LONG).show();
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
