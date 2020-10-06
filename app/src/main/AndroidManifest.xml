@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.healthcare">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,17 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Doctor_profile_PV"></activity>
-        <activity android:name=".Doctor_channelingDetails_edit"  />
+        <activity android:name=".CardViewHolder"
+            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".Doctor_resultList" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Doctor_profile_PV" />
+        <activity android:name=".Doctor_channelingDetails_edit" />
         <activity android:name=".Doctor_appoinments" />
         <activity android:name=".Doctor_channelingDetails" />
         <activity android:name=".Doctor_EditProfile" />
         <activity android:name=".Doctor_Profile" />
-        <activity android:name=".Doctor_list"/>
+        <activity android:name=".Doctor_list" />
         <activity android:name=".Doctor_Login" />
         <activity android:name=".Doctor_Register" />
-        <activity android:name=".MainActivity" >
-
+        <activity android:name=".Doctor_Search">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
