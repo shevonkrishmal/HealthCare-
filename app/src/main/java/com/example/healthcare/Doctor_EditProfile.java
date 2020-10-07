@@ -145,43 +145,8 @@ public class Doctor_EditProfile extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
-                    Toast.makeText(Doctor_EditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                final String email = profileEmail.getText().toString();
-                doctor.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        DocumentReference docRef = fStore.collection("Doctors").document(doctor.getUid());
-                        Map<String, Object> edited = new HashMap<>();
-                        edited.put("email",email);
-                        edited.put("fullname",profileFullName.getText().toString());
-                        edited.put("phone",profilePhone.getText().toString());
-                        edited.put("gmc",profilegmc.getText().toString());
-                        edited.put("Specialization",profilesplzn.getText().toString());
-
-                        //update realtime db
-                     //   mDatabase.child(DoctorID).updateChildren(edited);
-
-                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(Doctor_EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), Doctor_Profile.class));
-                                finish();
-                            }
-                        });
-                        Toast.makeText(Doctor_EditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Doctor_EditProfile.this,   e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-
+                updatefunction();
+              //  uploadImage(imageUri);
 
             }
         });
@@ -194,6 +159,48 @@ public class Doctor_EditProfile extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: " + fullName + " " + email + " " + phone+ " "+ gmc + " " +specialization+ " ");
 
+
+    }
+
+    private void updatefunction() {
+        if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
+            Toast.makeText(Doctor_EditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        final String email = profileEmail.getText().toString();
+        doctor.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                DocumentReference docRef = fStore.collection("Doctors").document(doctor.getUid());
+                Map<String, Object> edited = new HashMap<>();
+                edited.put("email",email);
+                edited.put("fullname",profileFullName.getText().toString());
+                edited.put("phone",profilePhone.getText().toString());
+                edited.put("gmc",profilegmc.getText().toString());
+                edited.put("Specialization",profilesplzn.getText().toString());
+
+
+                //update realtime db
+                mDatabase.child(DoctorID).updateChildren(edited);
+
+                docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(Doctor_EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), Doctor_Profile.class));
+                        finish();
+                    }
+                });
+                Toast.makeText(Doctor_EditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+            }
+
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Doctor_EditProfile.this,   e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -230,27 +237,33 @@ public class Doctor_EditProfile extends AppCompatActivity {
         startActivityForResult(intent, GALLERY_REQUEST);
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
             imageUri = data.getData();
             profileImageView.setImageURI(imageUri);
-            uploadImage(imageUri);
+
         }
     }
 
     private void uploadImage(Uri imageUri) {
 
-        final StorageReference fileRef = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
-        fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+        final StorageReference doctor = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
+        doctor.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 Toast.makeText(Doctor_EditProfile.this,"Image uploaded",Toast.LENGTH_LONG).show();
-                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                doctor.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
+                       // String url = uri.toString();
                         Picasso.get().load(uri).into(profileImageView);
+
+                      //doctor.child("image").setValue(url);
+                        //mDatabase.push().child(DoctorID).setValue(doctor);
                     }
                 });
 

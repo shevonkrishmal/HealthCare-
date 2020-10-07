@@ -15,9 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Doctor_resultList extends AppCompatActivity {
     public static final String EXTRA_DOCTORRESULTID = "DoctorID";
@@ -29,9 +32,9 @@ public class Doctor_resultList extends AppCompatActivity {
 
     private TextView Sname;
 
-    //private FirebaseFirestore fstore;
-   // private FirebaseAuth auth;
-   // FirebaseUser doctor;
+    private FirebaseFirestore fstore;
+    private FirebaseAuth auth;
+   FirebaseUser doctor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +51,13 @@ public class Doctor_resultList extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mDatabase = database.getReference().child("Doctor");
         query = mDatabase.orderByChild("Specialization").equalTo(input);
-
-        /*auth = FirebaseAuth.getInstance();
+/*
+        auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         doctor = auth.getCurrentUser();
-        query = fstore.collection("Doctors").whereEqualTo(input);
+        query = fstore.collection("Doctors").whereEqualTo("Specialization",input);
+*/
 
-         */
 
         doctorList = (RecyclerView) findViewById(R.id.resultDoctorlist);
         doctorList.setHasFixedSize(true);

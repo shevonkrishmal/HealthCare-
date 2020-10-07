@@ -1,9 +1,5 @@
 package com.example.healthcare;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,10 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -37,6 +39,11 @@ public class Doctor_channelingDetails_edit extends AppCompatActivity {
     private String DoctorID;
     private FirebaseUser doctor;
     private Button saveBtn;
+
+
+    private FirebaseDatabase database;
+    private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +73,10 @@ public class Doctor_channelingDetails_edit extends AppCompatActivity {
 
         DoctorID = fAuth.getCurrentUser().getUid();
         doctor = fAuth.getCurrentUser();
+
+
+        database = FirebaseDatabase.getInstance();
+        mDatabase = database.getReference().child("Doctor");
 
         final DocumentReference documentReference = fStore.collection("Doctors").document(DoctorID);
 
@@ -107,6 +118,9 @@ public class Doctor_channelingDetails_edit extends AppCompatActivity {
                         edited.put("Appointmentdate",E_Adate.getText().toString());
                         edited.put("Appointmenttime",E_Atime.getText().toString());
                         edited.put("Doctorfee",E_Dfee.getText().toString());
+
+                        mDatabase.child(DoctorID).updateChildren(edited);
+
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
