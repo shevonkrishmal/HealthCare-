@@ -1,9 +1,9 @@
 package com.example.healthcare;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -32,7 +34,7 @@ public class Doctor_Profile extends AppCompatActivity {
 
     private static final int GALLERY_INTENT_CODE = 1023;
     private static final int GALLERY_REQUEST = 100;
-    private TextView R_fullname, R_email, R_phone, R_gmc,R_splzn;
+    private TextView R_fullname, R_email, R_phone, R_gmc,R_splzn, R_ProfilePic;
     private ImageView ProfilePic;
     // private String Email,Password;
 
@@ -40,6 +42,10 @@ public class Doctor_Profile extends AppCompatActivity {
     private Button Updatebtn;
     private  Button ChannelDetails;
     private  Button Appoinments;
+
+
+    private FirebaseDatabase database;
+    private DatabaseReference mDatabase;
     private Button Addpic;
 
     // private FirebaseDatabase database;
@@ -56,7 +62,9 @@ public class Doctor_Profile extends AppCompatActivity {
     private FirebaseUser doctor;
 
     private Button resetpasswordbtn;
+String pic;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +72,7 @@ public class Doctor_Profile extends AppCompatActivity {
 
         R_fullname = findViewById(R.id.fullName);
         R_email = findViewById(R.id.Email);
-        ProfilePic = findViewById(R.id.profilePic);
+       ProfilePic = findViewById(R.id.profilePic);
       //  Addpic = findViewById(R.id.addpic);
         R_phone = findViewById(R.id.phone);
         R_gmc = findViewById(R.id.GMC);
@@ -73,23 +81,31 @@ public class Doctor_Profile extends AppCompatActivity {
         Updatebtn = findViewById(R.id.update_profile);
         ChannelDetails =findViewById(R.id.chbtn);
         Appoinments = findViewById(R.id.abtn);
+       // R_ProfilePic =findViewById(R.id.profilePic);
 
 
 
-        storageReference = FirebaseStorage.getInstance().getReference();
-
+        storageReference = FirebaseStorage.getInstance().getReference().child("doctor_profilePic");
         //Authentication
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
 
 
-        final StorageReference pofileRef = storageReference.child("Doctors/" + auth.getCurrentUser().getUid() + "profile.jpg");
+        DoctorID = auth.getCurrentUser().getUid();
+        doctor = auth.getCurrentUser();
+
+        database = FirebaseDatabase.getInstance();
+        mDatabase = database.getReference().child("Doctor").child(DoctorID);
+
+
+      /*  final StorageReference pofileRef = storageReference.child("Doctors/" + auth.getCurrentUser().getUid() + "profile.jpg");
         pofileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(ProfilePic);
             }
         });
+*/
 
         DoctorID = auth.getCurrentUser().getUid();
         doctor = auth.getCurrentUser();
@@ -104,7 +120,26 @@ public class Doctor_Profile extends AppCompatActivity {
                 R_phone.setText(documentSnapshot.getString("phone"));
                 R_gmc.setText(documentSnapshot.getString("gmc"));
                 R_splzn.setText(documentSnapshot.getString("Specialization"));
+                ProfilePic.setImageURI(Uri.parse(documentSnapshot.getString("image_url")));
 
+                Picasso.get().load(String.valueOf(ProfilePic)).into(ProfilePic);
+
+
+            }
+        });
+
+
+/*
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                pic = snapshot.child("image_url").getValue().toString().trim();
+
+                Picasso.get().load(pic).into(ProfilePic);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });

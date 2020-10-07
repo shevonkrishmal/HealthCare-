@@ -75,6 +75,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +94,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
 
         fstore = FirebaseFirestore.getInstance() ;
 
-        storageReference = FirebaseStorage.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference().child("doctor_profilePic");
 
         //profilePic = findViewById(R.id.profilePic);
         fullname =  findViewById(R.id.fullName);
@@ -212,24 +213,6 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         auth.createUserWithEmailAndPassword(Email, Password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -259,10 +242,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
 
 */
 
-
-
-
-                            final StorageReference filpath = storageReference.child("doctor_profilePic").child(System.currentTimeMillis() + "DoctorImg");
+                            final StorageReference filpath = storageReference.child(System.currentTimeMillis() + "DoctorImg");
                             filpath.putFile(imageURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -301,7 +281,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
                                                     user.put("Appointmenttime",Atime);
                                                     user.put("Doctorfee",Dfee);
                                                     user.put("Specialization",Specialization);
-                                                    user.put("image url",url);
+                                                    user.put("image_url",url);
 
 
                                                     mDatabase.child(DoctorID).setValue(user);
@@ -320,14 +300,6 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
                                     });
                                 }
                             });
-
-
-
-
-
-
-
-
 
 
 
