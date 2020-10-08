@@ -18,8 +18,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -120,16 +123,16 @@ String pic;
                 R_phone.setText(documentSnapshot.getString("phone"));
                 R_gmc.setText(documentSnapshot.getString("gmc"));
                 R_splzn.setText(documentSnapshot.getString("Specialization"));
-                ProfilePic.setImageURI(Uri.parse(documentSnapshot.getString("image_url")));
+               // ProfilePic.setImageURI(Uri.parse(documentSnapshot.getString("image_url")));
 
-                Picasso.get().load(String.valueOf(ProfilePic)).into(ProfilePic);
+                //Picasso.get().load(String.valueOf(ProfilePic)).into(ProfilePic);
 
 
             }
         });
 
 
-/*
+
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
