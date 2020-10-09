@@ -13,18 +13,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/srLocationsTopic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-light"
+            android:fontFamily="@font/audiowide12"
             android:paddingStart="15dp"
             android:paddingTop="20dp"
             android:paddingBottom="40dp"
             android:text="DOCTORS..."
-            android:textColor="#000000"
+            android:textColor="#F1EEEE"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -33,9 +34,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/alike_angular"
             android:text="TextView"
-            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textColor="#E8E3E3"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -43,6 +45,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/resultDoctorlist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/abx" />
 
 </LinearLayout>

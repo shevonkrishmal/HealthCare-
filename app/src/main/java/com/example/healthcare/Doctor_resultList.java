@@ -74,13 +74,12 @@ public class Doctor_resultList extends AppCompatActivity {
         FirebaseRecyclerAdapter<CardData, CardViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<CardData, CardViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull CardViewHolder cardViewHolder, final int i, @NonNull CardData cardData) {
-                cardViewHolder.setDetails(getApplicationContext(), cardData.getName(), cardData.getEmail(), cardData.getImage());
-
+                cardViewHolder.setDetails(getApplicationContext(), cardData.getFullname(), cardData.getEmail(), cardData.getImage_url(),cardData.getSpecialization());
                 cardViewHolder.myView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         String dataId = getRef(i).getKey();
-                        // Log.i("detailsHanderCheck", "Touched" + dataId);
+                        Log.i("detailsHanderCheck", "Touched" + dataId);
                         Intent intent = new Intent(Doctor_resultList.this,Doctor_profile_PV.class);
                         intent.putExtra(EXTRA_DOCTORRESULTID, dataId);
                         startActivity(intent);

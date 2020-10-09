@@ -21,8 +21,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -55,6 +58,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference mDatabase;
+    String pic;
 
 
 
@@ -73,7 +77,8 @@ public class Doctor_EditProfile extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         doctor = fAuth.getCurrentUser();
-        storageReference = FirebaseStorage.getInstance().getReference();
+
+        storageReference = FirebaseStorage.getInstance().getReference().child("doctor_profilePic");
 
 
         profileFullName = findViewById(R.id.fullName);
@@ -87,13 +92,13 @@ public class Doctor_EditProfile extends AppCompatActivity {
         deleteBtn =findViewById(R.id.deletbtn);
 
 
-        database = FirebaseDatabase.getInstance();
-        mDatabase = database.getReference().child("Doctor");
-
 
 //getdata from database
         DoctorID = fAuth.getCurrentUser().getUid();
         doctor = fAuth.getCurrentUser();
+
+        database = FirebaseDatabase.getInstance();
+        mDatabase = database.getReference().child("Doctor");
 
 
         final DocumentReference documentReference = fStore.collection("Doctors").document(DoctorID);
@@ -114,6 +119,22 @@ public class Doctor_EditProfile extends AppCompatActivity {
             }
         });
 
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                pic = snapshot.child(DoctorID).child("image_url").getValue().toString().trim();
+
+                Picasso.get().load(pic).into(profileImageView);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,13 +144,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
         });
 
 
-        final StorageReference pofileRef = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
-        pofileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).into(profileImageView);
-            }
-        });
+
 
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
@@ -179,7 +194,7 @@ public class Doctor_EditProfile extends AppCompatActivity {
                 edited.put("phone",profilePhone.getText().toString());
                 edited.put("gmc",profilegmc.getText().toString());
                 edited.put("Specialization",profilesplzn.getText().toString());
-
+              //  edited.put("image_url",url);
 
                 //update realtime db
                 mDatabase.child(DoctorID).updateChildren(edited);
@@ -245,13 +260,14 @@ public class Doctor_EditProfile extends AppCompatActivity {
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
             imageUri = data.getData();
             profileImageView.setImageURI(imageUri);
+            uploadImage(imageUri);
 
         }
     }
 
     private void uploadImage(Uri imageUri) {
-
-        final StorageReference doctor = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
+        final StorageReference doctor = storageReference.child(System.currentTimeMillis() + "DoctorImg");
+        //final StorageReference doctor = storageReference.child("Doctors/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
         doctor.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -259,11 +275,25 @@ public class Doctor_EditProfile extends AppCompatActivity {
                 doctor.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                       // String url = uri.toString();
+                       String url = uri.toString();
                         Picasso.get().load(uri).into(profileImageView);
 
-                      //doctor.child("image").setValue(url);
-                        //mDatabase.push().child(DoctorID).setValue(doctor);
+                        DoctorID = fAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = fStore.collection("Doctors").document(DoctorID);
+                       Map<String,Object> user = new HashMap<>();
+                       user.put("image_url",url);
+
+                      // mDatabase.push().child(DoctorID).setValue(doctor);
+                        mDatabase.child(DoctorID).updateChildren(user);
+
+                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+
+                            }
+                        });
+
+
                     }
                 });
 

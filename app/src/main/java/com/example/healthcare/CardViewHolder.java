@@ -22,14 +22,16 @@ public class CardViewHolder extends RecyclerView.ViewHolder {
         myView = itemView;
     }
 
-    public void setDetails(Context ctx, String name, String image,String email) {
+    public void setDetails(Context ctx, String fullname, String image_url,String email, String Specialization) {
         TextView card_head = (TextView) myView.findViewById(R.id.mgUcName);
+        TextView Specialization1 =(TextView)myView.findViewById(R.id.Specialization);
+       TextView cemail = (TextView) myView.findViewById(R.id.Email);
+       ImageView card_image = (ImageView) myView.findViewById(R.id.profilePic);
 
-        TextView cemail = (TextView) myView.findViewById(R.id.mgUcEmail);
-        ImageView card_image = (ImageView) myView.findViewById(R.id.mgUcImg);
-        card_head.setText(name);
-       cemail.setText(email);
-        Picasso.get().load(image).into(card_image);
+        card_head.setText(fullname);
+          cemail.setText(image_url);
+        Specialization1.setText(Specialization);
+        Picasso.get().load(email).into(card_image);
 
         Animation animation = AnimationUtils.loadAnimation(ctx, android.R.anim.slide_in_left);
         myView.setAnimation(animation);

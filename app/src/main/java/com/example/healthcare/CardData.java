@@ -1,55 +1,48 @@
 package com.example.healthcare;
 
-import android.util.Log;
-
 public class CardData {
 
-    private String name,description,image,email;
+    private String  Specialization,email,fullname,image_url;
 
     public CardData() {
     }
 
-    public CardData(String name, String description, String image,String email) {
-        this.name = name;
-        this.description = description;
-        this.image = image;
+    public CardData(String specialization, String email, String fullname, String image_url) {
+        Specialization = specialization;
         this.email = email;
-
+        this.fullname = fullname;
+        this.image_url = image_url;
     }
 
-    public String getImage() {
-        return image;
+    public String getSpecialization() {
+        return Specialization;
     }
 
-    public String getEmail(){return email;}
+    public void setSpecialization(String specialization) {
+        Specialization = specialization;
+    }
 
-    public void setEmail(String email){
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setImage(String image) {
-        Log.i("settercheck",image);
-        this.image = image;
+    public String getFullname() {
+        return fullname;
     }
 
-    public String getName() {
-        return name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public void setName(String name) {
-        Log.i("settercheck",name);
-        this.name = name;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public String getDescription() {
-        return description;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
-
-
 }

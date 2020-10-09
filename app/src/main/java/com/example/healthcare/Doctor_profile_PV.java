@@ -1,22 +1,23 @@
 package com.example.healthcare;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -24,7 +25,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class Doctor_profile_PV extends AppCompatActivity {
@@ -36,11 +36,15 @@ public class Doctor_profile_PV extends AppCompatActivity {
     private ImageView ProfilePic;
     // private String Email,Password;
 
-    public Uri imageUri = null;
+   // public Uri imageUri = null;
 
     private Button Addpic;
     private Button channelingbtn;
 
+
+
+    private FirebaseDatabase database;
+    private DatabaseReference mDatabase;
 
     private FirebaseAuth auth;
 
@@ -51,6 +55,7 @@ public class Doctor_profile_PV extends AppCompatActivity {
 
     private String DoctorID;
     private FirebaseUser doctor;
+     String pic;
 
     //private Button resetpasswordbtn;
 
@@ -76,23 +81,25 @@ public class Doctor_profile_PV extends AppCompatActivity {
 
 
 
-        storageReference = FirebaseStorage.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference().child("doctor_profilePic");
 
         //Authentication
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
 
 
-        final StorageReference pofileRef = storageReference.child("Doctors/" + auth.getCurrentUser().getUid() + "profile.jpg");
+       /* final StorageReference pofileRef = storageReference.child("Doctors/" + auth.getCurrentUser().getUid() + "profile.jpg");
         pofileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(ProfilePic);
             }
-        });
+        });*/
 
         DoctorID = auth.getCurrentUser().getUid();
         doctor = auth.getCurrentUser();
+        database = FirebaseDatabase.getInstance();
+        mDatabase = database.getReference().child("Doctor").child(DoctorID);
 
         final DocumentReference documentReference = fstore.collection("Doctors").document(DoctorID);
 
@@ -113,6 +120,25 @@ public class Doctor_profile_PV extends AppCompatActivity {
 
             }
         });
+
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                pic = snapshot.child("image_url").getValue().toString().trim();
+
+                Picasso.get().load(pic).into(ProfilePic);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
 
 
     /*    .setOnClickListener(new View.OnClickListener() {
@@ -208,7 +234,7 @@ public class Doctor_profile_PV extends AppCompatActivity {
 
     }*/
 
-    @Override
+ /*   @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
@@ -241,7 +267,7 @@ public class Doctor_profile_PV extends AppCompatActivity {
         });
 
     }
-
+*/
 
 
 

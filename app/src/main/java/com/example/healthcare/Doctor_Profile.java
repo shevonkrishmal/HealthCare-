@@ -37,7 +37,7 @@ public class Doctor_Profile extends AppCompatActivity {
 
     private static final int GALLERY_INTENT_CODE = 1023;
     private static final int GALLERY_REQUEST = 100;
-    private TextView R_fullname, R_email, R_phone, R_gmc,R_splzn, R_ProfilePic;
+    private TextView R_fullname, R_email, R_phone, R_gmc,R_splzn;
     private ImageView ProfilePic;
     // private String Email,Password;
 
@@ -76,7 +76,6 @@ String pic;
         R_fullname = findViewById(R.id.fullName);
         R_email = findViewById(R.id.Email);
        ProfilePic = findViewById(R.id.profilePic);
-      //  Addpic = findViewById(R.id.addpic);
         R_phone = findViewById(R.id.phone);
         R_gmc = findViewById(R.id.GMC);
         R_splzn = findViewById(R.id.Specialization);
@@ -130,7 +129,6 @@ String pic;
 
             }
         });
-
 
 
         mDatabase.addValueEventListener(new ValueEventListener() {

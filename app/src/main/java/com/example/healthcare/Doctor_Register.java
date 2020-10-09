@@ -43,7 +43,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
     private TextView loginbtn;
     StorageReference storageReference;
     private String item;
-    ImageView propic;
+    private ImageView propic;
     public Uri imageURI;
 
     //private ProgressBar progressBar;
@@ -96,7 +96,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
 
         storageReference = FirebaseStorage.getInstance().getReference().child("doctor_profilePic");
 
-        //profilePic = findViewById(R.id.profilePic);
+
         fullname =  findViewById(R.id.fullName);
         email =  findViewById(R.id.Email);
         password = findViewById(R.id.password);
@@ -110,7 +110,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
         atime = findViewById(R.id.Atime);
         dfee  = findViewById(R.id.channelingfee);
         splzn = findViewById(R.id.Specialization);
-        propic = findViewById(R.id.rpropic);
+        propic = findViewById(R.id.profilePic);
 
         /*if (auth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -192,8 +192,9 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
         final String   Roomnum = roomnum.getText().toString();
         final String   Dfee = dfee.getText().toString();
         final String   Specialization = splzn.getText().toString();
-        final String  doctorPV = item;
-        // url = imageUri.toString();
+
+      //  final String  Specialization = item;
+      // final String url = imageURI.toString();
 
         if(TextUtils.isEmpty(Email)){
             email.setError("Email is Required.");
@@ -220,27 +221,7 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
-                           // Toast.makeText(Doctor_Register.this,"user created", Toast.LENGTH_LONG).show();
-                           // DoctorID = auth.getCurrentUser().getUid();
 
-                           /*
-                            DocumentReference documentReference = fstore.collection("Doctors").document(DoctorID);
-                            Map<String,Object> user = new HashMap<>();
-                            user.put("fullname",fullName);
-                            user.put("email",Email);
-                            user.put("phone",phone);
-                            user.put("gmc",Gmc);
-                            user.put("room number",Roomnum);
-                            user.put("Appointmentdate",Adate);
-                            user.put("Appointmenttime",Atime);
-                            user.put("Doctorfee",Dfee);
-                            user.put("Specialization",Specialization);
-                           // user.put("Image",propic);
-
-                            //realtime db
-                           // mDatabase.child(DoctorID).setValue(user);
-
-*/
 
                             final StorageReference filpath = storageReference.child(System.currentTimeMillis() + "DoctorImg");
                             filpath.putFile(imageURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -259,19 +240,9 @@ public class Doctor_Register extends AppCompatActivity implements AdapterView.On
                                                     DocumentReference documentReference = fstore.collection("Doctors").document(DoctorID);
                                                     Map<String,Object> user = new HashMap<>();
 
-                                                    /*doctor.child("fullname").setValue(fullName);
-                                                    doctor.child("email").setValue(Email);
-                                                    doctor.child("passworrd").setValue(Password);
-                                                    doctor.child("phone").setValue(phone);
-                                                    doctor.child("gmc").setValue(Gmc);
-                                                    doctor.child("Specialization").setValue(Specialization);
-                                                    doctor.child("Roomnumber").setValue(Roomnum);
-                                                    doctor.child("Availabletime").setValue(Atime);
-                                                    doctor.child("Availabledate").setValue(Adate);
-                                                    doctor.child("channeling fee").setValue(Dfee);
-                                                    doctor.child("image url").setValue(url);
 
-*/
+
+
                                                     user.put("fullname",fullName);
                                                     user.put("email",Email);
                                                     user.put("phone",phone);
